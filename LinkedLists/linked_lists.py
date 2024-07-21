@@ -31,6 +31,14 @@ class LinkedList:
         nodes.append('None')
         return ' -> '.join(nodes)
     
+    def get_nodes(self):
+        node = self.head
+        nodes = []
+        while node is not None:
+            nodes.append(node)
+            node = node.next
+        return nodes
+    
     def add_first(self, node):
         node.next = self.head
         self.head = node
